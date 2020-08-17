@@ -1,0 +1,14 @@
+.content_post
+  .more
+    %span= image_tag 'arrow_top.png'
+    %ul.more_list
+      %li
+        = link_to '詳細', "#", method: :get
+      %li
+        = link_to '編集', "#", method: :get
+      %li
+        = link_to '削除', "#", method: :delete
+  %p ツイート本文
+  %span.name
+    %a{:href => "#"}
+      %span> 投稿者

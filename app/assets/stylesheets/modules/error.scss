@@ -1,0 +1,57 @@
+@mixin space-between() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin one-hundred-px() {
+  height: 100px;
+  width: 100px;
+}
+
+@mixin two-hundred-px() {
+  height: 200px;
+  width: 200px;
+}
+
+$left-color: #ee82ee;
+$center-color: #c71585;
+$right-color: #9400d3;
+
+
+
+.top-boxes {
+  @include space-between();
+  &__left {
+    @include one-hundred-px();
+    background-color: $left-color;
+  }
+  &__center {
+    @include one-hundred-px();
+    background-color: $center-color;
+  }
+  &__light {
+    @include one-hundred-px();
+    background-color: $right-color;
+  }
+}
+
+.bottom-boxes {
+  @include space-between();
+  &__left {
+    @include two-hundred-px();
+    background-color: $left-color;
+    .bottom-boxes__center {
+      @include two-hundred-px();
+      background-color: $center-color;
+    }
+  }
+  &__right {
+    @include two-hundred-px();
+    background-color: $right-color;
+    &--blue {
+      height: 50px;
+      width: 50px;
+      background-color: blue;
+    }
+  }
+}

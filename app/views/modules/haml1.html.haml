@@ -1,0 +1,40 @@
+-# タグ生成の説明
+%div div要素です
+%p p要素です
+%a a要素です
+%a a要素です
+%p p要素です
+
+
+-# クラス名、id名の説明
+%div.first-content div要素です
+%p#second-content p要素です
+%a.third-content.a-essence#id-name a要素です
+%br
+.class
+
+
+-# 属性の説明
+%a{href: "#"} リンクボタン
+%br
+%input
+%br
+%input{type: "text", placeholder: "type a message"}
+
+
+-# 子要素の説明
+.parent
+  .child1
+    .grand-child
+  .child2
+
+
+-# ヘルパーメソッドの説明
+= link_to "リンクボタン", "#"
+
+%p おはようございます
+- if true
+  %p こんにちは
+
+- if false
+  %p さようなら
